@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --cyan: #00f2ff;
+  --magenta: #ff00ff;
+  --bg: #050505;
+  --glass: rgba(255,255,255,0.04);
+  --glass-border: rgba(0,242,255,0.18);
+}
+
+* { box-sizing: border-box; margin: 0; }
+body { background: var(--bg); color: #e0e0e0; font-family: 'Inter', sans-serif; min-height: 100vh; }
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+}
+
+.neon-text { color: var(--cyan); text-shadow: 0 0 12px rgba(0,242,255,0.6); }
+.neon-magenta { color: var(--magenta); text-shadow: 0 0 12px rgba(255,0,255,0.6); }
+
+.btn-primary {
+  background: transparent;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 0 12px rgba(0,242,255,0.15);
+}
+.btn-primary:hover {
+  background: rgba(0,242,255,0.1);
+  box-shadow: 0 0 24px rgba(0,242,255,0.35);
+}
+.btn-primary:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-danger {
+  border-color: var(--magenta);
+  color: var(--magenta);
+  box-shadow: 0 0 12px rgba(255,0,255,0.15);
+}
+.btn-danger:hover { background: rgba(255,0,255,0.1); box-shadow: 0 0 24px rgba(255,0,255,0.35); }
+
+.cyber-input {
+  background: rgba(0,242,255,0.04);
+  border: 1px solid rgba(0,242,255,0.3);
+  color: #fff;
+  border-radius: 10px;
+  padding: 14px 18px;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+  letter-spacing: 0.1em;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+.cyber-input:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 20px rgba(0,242,255,0.2);
+}
